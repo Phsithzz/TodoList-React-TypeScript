@@ -8,7 +8,7 @@ interface Props {
 
 const TodoList: React.FC<Props> = ({ todos, onToggle, onDelete }) => {
   return (
-    <ul className="mt-4 space-y-2">
+    <ul className="mt-4 space-y-2 overflow-y-scroll">
       {todos.map((todo) => (
         <li
           key={todo.id}
@@ -16,7 +16,7 @@ const TodoList: React.FC<Props> = ({ todos, onToggle, onDelete }) => {
         >
           <span
             onClick={() => onToggle(todo.id)}
-            className={`cursor-pointer select-none ${
+            className={`cursor-pointer select-none overflow-x-scroll ${
               todo.completed ? "line-through text-gray-400" : "text-black"
             }`}
           >

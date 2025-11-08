@@ -32,7 +32,7 @@ const App = () => {
   return (
     <>
       <div className="bg-black/50 fixed right-0 top-0 flex items-center  justify-center w-full h-full z-50">
-        <div className="bg-white rounded-2xl shadow-2xl p-4 w-[500px] h-[300px] flex flex-col space-y-4">
+        <div className="bg-white rounded-2xl shadow-2xl p-4 w-[500px] h-[500px] flex flex-col space-y-4">
           <h1 className="text-2xl text-center font-semibold">Todo List</h1>
           <TodoForm onAdd={addTodo} />
           <TodoList todos={todos} onToggle={toggleTodo} onDelete={deleteTodo} />
